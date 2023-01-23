@@ -1,20 +1,20 @@
 
 .div-one {
     background-color: #1F2937;
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px 72px;
+    padding: 24px 72px 72px;
     gap: 24px
 }
 
     .hero-text-container {
         flex: 1;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        gap: 8px
+        gap: 8px;
     }
         .hero-text {
             font-size: 48px;
@@ -31,11 +31,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #5e6063;
         color: #e5e7eb;
         height: 180px;
         max-width: 400px;
     }
+        .hero-text-image img {
+            height: 120px;
+        }
 
     .sign-up-button {
         border-radius: 8px;
@@ -46,13 +48,15 @@
         font-weight: bold;
         color: #F9FAF8;
         cursor: pointer;
-        transition: opacity 0.15s;
+        transition: opacity 0.15s, background-color 0.25s, color 0.25s;
+        margin-top: 8px;
     }
         .sign-up-button:hover {
-            opacity: 0.8;
+            background-color: #F9FAF8;
+            color: #3882F6;
         }
         .sign-up-button:active {
-            opacity: 0.6;
+            opacity: 0.7;
         }
 
 .div-two {
@@ -69,6 +73,7 @@
     }
     .random-information-subtext-container {
         display: flex;
+        flex-wrap: wrap;
         padding: 0 160px;
         justify-content: center;
         gap: 18px;
@@ -82,29 +87,29 @@
             flex-basis: 150px;
             flex: 1;
         }
-            .subtext-illustration {
-                height: 120px;
-                width: 120px;
-                border: 3px solid #3882F6;
+             .subtext-illustration img {                 height: 120px;
+                object-fit: cover;
                 border-radius: 12px;
+                border: 2px solid #3882F6;
+                background-color: black;
                 cursor: pointer;
-                transition: background-color 0.15s;
+                box-shadow: 0 0 10px rgba(0,0,0, 0.15);
+                transition: opacity 0.15s;
+                }
+            .subtext-illustration:hover img {
+                opacity: 0.8;
             }
-                .subtext-illustration:hover {
-                    background-color: #e5e7eb;
-                }
-                .subtext-illustration:active {
-                    background-color: #bbbbbb;
-                }
+            .subtext-illustration:active img {
+                opacity: 0.5;
+            }
 
 .div-three {
     background-color: #e5e7eb;
-    height: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 72px;
+    padding: 128px 128px;
 }
     .testimonial {
         font-size: 36px;
@@ -118,17 +123,18 @@
     }
 
 .div-four {
-    height: 300px;
+    padding: 72px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
     .call-to-action-container {
         background-color: #3882F6;
-        width: 600px;
+        flex-basis: 600px;
         border-radius: 8px;
         color: #F9FAF8;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding: 24px 96px;
         align-items: center;
@@ -140,47 +146,51 @@
         }
         .sign-up-button-two {
             color: #F9FAF8;
+            font-weight: bold;
             border: 1px solid #F9FAF8;
             background-color: #3882F6;
             padding: 6px 18px;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.15s;
+            transition: background-color 0.25s, color 0.25s, opacity 0.15s;
         }
             .sign-up-button-two:hover {
-                background-color: #619eff;
+                border: none;
+                background-color: #F9FAF8;
+                color: #3882F6;
+                padding: 7px 19px;
             }
             .sign-up-button-two:active {
-                background-color: #70a7ff;
+                opacity: 0.7;
             }
 
 
 @media (min-width:1300px) {
     .div-one {
-        padding: 24px 200px;
+        padding: 24px 200px 72px;
     }
     .div-two {
-        padding: 24px 200px;
+        padding: 24px 200px 72px;
     }
     .div-three {
-        padding: 24px 200px;
+        padding: 128px 300px;
     }
     .div-four {
-        padding: 24px 200px;
+        padding: 72px 200px;
     }
 }
 
 @media (min-width: 1800px) {
     .div-one {
-        padding: 24px 320px;
+        padding: 24px 320px 72px;
     }
     .div-two {
-        padding: 24px 320px;
+        padding: 24px 320px 72px;
     }
     .div-three {
-        padding: 24px 320px;
+        padding: 128px 540px;
     }
     .div-four {
-        padding: 24px 320px;
+        padding: 72px 320px;
     }
 }

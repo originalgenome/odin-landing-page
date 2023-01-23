@@ -4,24 +4,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 72px;
-    height: 64px;
+    height: 72px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 
-.logo-container {
-    font-size: 24px;
-    font-weight: bold;
-    color: #F9FAF8;
-    cursor: pointer;
-    transition: opacity 0.15s;
-}
-    .logo-container:hover {
+    .logo-container img {
+        height: 48px;
+        cursor: pointer;
+    }
+
+    .logo-container:hover img {
         opacity: 0.7;
     }
-    .logo-container:active {
+    .logo-container:active img {
         opacity: 0.5;
     }
 
